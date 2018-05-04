@@ -5,4 +5,9 @@
     <li><%= comedian.name %></li>
     <li><%= comedian.age %></li>
 </ul>
+  <% @specials.each do |special|%>
+    <li><%= special.name%></li>
+    <li><%= special.comedian_id%></li>
+    <%end%>
 <%end%>
+
