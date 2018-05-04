@@ -21,4 +21,13 @@ RSpec.describe "user visits comedians" do
     expect(page).to have_content(special.comedian_id)
   end
 
+  it 'displays an average age for comedians' do
+    com_1 = Comedian.create(name: 'Kathy Griffin', age: '55')
+    com_2 = Comedian.create(name: 'Michael Che', age: '35')
+
+    visit('/comedians')
+
+    expect(page).to have_content(45)
+  end
+
 end
